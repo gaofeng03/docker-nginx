@@ -1,0 +1,15 @@
+nginx:
+  image: daocloud.io/library/nginx:1.7.1
+  command: ''
+  privileged: false
+  restart: always
+  links:
+  - ngrok:ngrok
+  ports:
+  - 80:80
+  - 443:443
+  volumes:
+  - /usr/docker-volume/nginx/etc/cert:/etc/cert
+  - /usr/docker-volume/nginx/etc/nginx.conf:/etc/nginx.conf
+  - /usr/docker-volume/nginx/etc/reverse-proxy.conf:/etc/reverse-proxy.conf
+  - /usr/docker-volume/nginx/html:/usr/local/nginx/html
