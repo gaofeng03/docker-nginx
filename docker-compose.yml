@@ -1,5 +1,5 @@
 nginx:
-  image: daocloud.io/library/nginx:1.7.1
+  image: daocloud.io/gaofeng0300/nginx:latest
   command: ''
   privileged: false
   restart: always
